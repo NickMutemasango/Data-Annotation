@@ -64,7 +64,7 @@ const CTA = () => {
                 backgroundColor: "rgba(255,255,255,0.1)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-[#10B981] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#10B981]/10 transition-all"
+              className="border-2 border-[#10B981] w-full text-white px-8 py-4 rounded-xl font-bold hover:bg-[#10B981]/10 transition-all"
             >
               Speak With an Expert
             </motion.button>

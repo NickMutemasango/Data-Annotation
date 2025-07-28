@@ -9,6 +9,7 @@ import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
 import CaseStudyDetail from './pages/CaseStudyDetail'
+import Careers from './pages/Careers'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
+        <Route path="/careers" element={<Careers/>} />
       </Routes>
       <Footer />
     </Router>
