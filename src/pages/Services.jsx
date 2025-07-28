@@ -74,7 +74,7 @@ const Services = () => {
       title: 'Text Annotation',
       description: 'Labeling for NLP applications',
       detailedDescription: 'Our text annotation services include entity recognition, sentiment analysis, intent detection, and semantic labeling. We help prepare textual data for NLP models with accurate tagging that captures linguistic nuances and contextual relationships.',
-      image: 'https://cdn.clickworker.com/wp-content/uploads/2023/02/types-of-data-annotation.jpg'
+      image: 'https://i0.wp.com/spotintelligence.com/wp-content/uploads/2024/10/text-annotation-types.jpg?fit=1920%2C1080&ssl=1'
     }
   ];
 

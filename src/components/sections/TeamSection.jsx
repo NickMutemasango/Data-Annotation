@@ -3,6 +3,7 @@ import Quality from '../../Pictures/Haz.jpg'
 import CTO from '../../Pictures/Genius2.jpg'
 import Founder from '../../Pictures/Tadie2.bmp';
 
+
 const teamMembers = [
   {
     name: "Tadiwanashe",
@@ -49,7 +50,7 @@ const TeamSection = () => {
             transition={{ delay: index * 0.1 }}
             className="bg-white rounded-xl shadow-md overflow-hidden"
           >
-            <img 
+            <img
               src={member.image} 
               alt={member.name} 
               className="w-full h-[352px] xl:h-[250px]  object-cover"

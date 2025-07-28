@@ -7,6 +7,7 @@ import Stats from '../components/sections/Stats';
 import CTA from '../components/sections/CTA';
 import Tools from '../components/sections/Tools';
 
+
 const Home = () => {
   return (
     <div className="overflow-hidden">
@@ -45,10 +46,10 @@ const Home = () => {
         <img 
           src="https://avistos.com/images/services/skeleton.jpg" 
           alt="Image annotation"
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full  object-cover group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute bottom-0 left-0 p-6 z-20">
-          <div className="bg-[#10B981] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <div className="bg-[#10B981] text-white rounded-full w-10 h-10 flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
@@ -74,9 +75,11 @@ const Home = () => {
               Keypoint Annotation
             </li>
           </ul>
-          <button className="mt-4 px-4 py-2 bg-[#10B981] text-white rounded-lg text-sm font-medium hover:bg-[#0e9f72] transition-colors">
+         <a href="/services">
+           <button className="mt-4 px-4 py-2 bg-[#10B981] text-white rounded-lg text-sm font-medium hover:bg-[#0e9f72] transition-colors">
             Learn More
           </button>
+         </a>
         </div>
       </motion.div>
 
@@ -95,7 +98,7 @@ const Home = () => {
           className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute bottom-0 left-0 p-6 z-20">
-          <div className="bg-[#10B981] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <div className="bg-[#10B981] text-white rounded-full w-10 h-10 flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
@@ -121,9 +124,11 @@ const Home = () => {
               Intent Classification
             </li>
           </ul>
+          <a href="/services">
           <button className="mt-4 px-4 py-2 bg-[#10B981] text-white rounded-lg text-sm font-medium hover:bg-[#0e9f72] transition-colors">
             Learn More
           </button>
+          </a>
         </div>
       </motion.div>
 
@@ -142,7 +147,7 @@ const Home = () => {
           className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute bottom-0 left-0 p-6 z-20">
-          <div className="bg-[#10B981] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <div className="bg-[#10B981] text-white rounded-full w-10 h-10 flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -168,9 +173,9 @@ const Home = () => {
               Temporal Segmentation
             </li>
           </ul>
-          <button className="mt-4 px-4 py-2 bg-[#10B981] text-white rounded-lg text-sm font-medium hover:bg-[#0e9f72] transition-colors">
+          <a href="/services"><button className="mt-4 px-4 py-2 bg-[#10B981] text-white rounded-lg text-sm font-medium hover:bg-[#0e9f72] transition-colors">
             Learn More
-          </button>
+          </button></a>
         </div>
       </motion.div>
     </div>
@@ -218,9 +223,9 @@ const Home = () => {
               Emotion Detection
             </li>
           </ul>
-          <button className="mt-4 px-4 py-2 bg-[#10B981] text-white rounded-lg text-sm font-medium hover:bg-[#0e9f72] transition-colors">
+          <a href="/services"><button className="mt-4 px-4 py-2 bg-[#10B981] text-white rounded-lg text-sm font-medium hover:bg-[#0e9f72] transition-colors">
             Learn More
-          </button>
+          </button></a>
         </div>
       </motion.div>
 
@@ -263,13 +268,13 @@ const Home = () => {
                 <svg className="w-5 h-5 mr-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Geospatial Data Labeling
+                Sports Data Labeling
               </li>
             </ul>
           </div>
-          <button className="mt-6 px-6 py-2 bg-white text-[#10B981] rounded-lg font-medium hover:bg-gray-100 transition-colors w-full text-center">
+          <a href="/contact"><button className="mt-6 px-6 py-2 bg-white text-[#10B981] rounded-lg font-medium hover:bg-gray-100 transition-colors w-full text-center">
             Custom Solution Inquiry
-          </button>
+          </button></a>
         </div>
       </motion.div>
     </div>

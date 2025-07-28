@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Tag from '../Pictures/tag.jpg'
 
 const CaseStudyDetail = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const CaseStudyDetail = () => {
         "Delivered the complete dataset 2 weeks ahead of schedule",
         "Cost 40% less than quotes from US-based annotation providers"
       ],
-      image: "https://www.dice.com/binaries/small/content/gallery/dice/insights/2019/07/shutterstock_1019141671.jpg",
+      image: "https://www.labelvisor.com/content/images/2023/02/cuboid.jpg",
       tags: ["Computer Vision", "Large Scale", "Automotive"],
       stats: [
         { value: "500K", label: "Images annotated" },
@@ -41,7 +42,7 @@ const CaseStudyDetail = () => {
         "Enabled FDA clearance for their diagnostic AI system",
         "Completed project 3 weeks ahead of regulatory submission deadline"
       ],
-      image: "https://www.medicaldevice-network.com/wp-content/uploads/sites/23/2023/03/shutterstock_1927454381.jpg",
+      image: "https://keymakr.com/blog/content/images/2024/06/KM66main.jpg",
       tags: ["Healthcare", "Medical Imaging", "DICOM"],
       stats: [
         { value: "100K", label: "X-rays annotated" },
@@ -63,7 +64,7 @@ const CaseStudyDetail = () => {
         "Enabled personalized recommendations increasing conversions by 18%",
         "Scaled annotation team from 10 to 100 within 2 weeks"
       ],
-      image: "https://www.retail-insight-network.com/wp-content/uploads/sites/20/2023/04/shutterstock_2188224603.jpg",
+      image: Tag,
       tags: ["E-commerce", "Classification", "Scalability"],
       stats: [
         { value: "1M+", label: "Products classified" },
@@ -85,7 +86,7 @@ const CaseStudyDetail = () => {
         "Enabled real-time performance insights during games",
         "Identified 15% performance improvement opportunities"
       ],
-      image: "https://www.sportsbusinessjournal.com/-/media/Images/Daily/2023/05/15/Stadium-Tech/stadiumtech-1.ashx",
+      image: "https://www.sblcorp.ai/wp-content/uploads/2024/05/sports-annotation.webp",
       tags: ["Sports Tech", "Motion Tracking", "Real-time"],
       stats: [
         { value: "50K", label: "Hours processed" },
@@ -99,20 +100,20 @@ const CaseStudyDetail = () => {
   const caseStudy = caseStudies[id] || caseStudies[1]; // Default to first case study if invalid ID
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#ECFDF5] to-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[500px]">
+      <section className="relative h-[60vh] min-h-[500px]">
         <div className="absolute inset-0 overflow-hidden">
           <img 
             src={caseStudy.image} 
             alt={caseStudy.title} 
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#10B981] to-transparent opacity-90" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#10B981] to-transparent opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent opacity-40" />
         </div>
         
-        <div className="relative h-full flex items-end pb-20">
+        <div className="relative h-full flex items-end pb-16">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -127,7 +128,7 @@ const CaseStudyDetail = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                    className="bg-white text-[#10B981] text-sm font-semibold px-3 py-1 rounded-full shadow-sm"
+                    className="bg-white text-gray-800 text-sm font-semibold px-3 py-1 rounded-full shadow-sm"
                   >
                     {tag}
                   </motion.span>
@@ -135,7 +136,7 @@ const CaseStudyDetail = () => {
               </div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight"
+                className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -148,7 +149,7 @@ const CaseStudyDetail = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <p className="text-xl text-white opacity-90 font-medium">
+                <p className="text-lg text-white opacity-90 font-medium">
                   <span className="font-bold">{caseStudy.client}</span> • {caseStudy.industry}
                 </p>
               </motion.div>
@@ -167,16 +168,12 @@ const CaseStudyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mb-16 bg-white p-8 rounded-2xl shadow-lg"
+              className="mb-16 bg-white p-8 rounded-xl shadow-md"
             >
-              <div className="flex items-center mb-8">
-                <div className="w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900">The Challenge</h2>
-              </div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 relative pb-4">
+                <span className="absolute bottom-0 left-0 w-16 h-1 bg-blue-600"></span>
+                The Challenge
+              </h2>
               <div className="prose prose-lg text-gray-600 max-w-none">
                 <p>{caseStudy.challenge}</p>
               </div>
@@ -187,16 +184,12 @@ const CaseStudyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mb-16 bg-white p-8 rounded-2xl shadow-lg"
+              className="mb-16 bg-white p-8 rounded-xl shadow-md"
             >
-              <div className="flex items-center mb-8">
-                <div className="w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900">Our Solution</h2>
-              </div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 relative pb-4">
+                <span className="absolute bottom-0 left-0 w-16 h-1 bg-blue-600"></span>
+                Our Solution
+              </h2>
               <div className="prose prose-lg text-gray-600 max-w-none">
                 <p>{caseStudy.solution}</p>
               </div>
@@ -207,38 +200,36 @@ const CaseStudyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="bg-white p-8 rounded-2xl shadow-lg"
+              className="bg-white p-8 rounded-xl shadow-md"
             >
-              <div className="flex items-center mb-8">
-                <div className="w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900">The Results</h2>
-              </div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 relative pb-4">
+                <span className="absolute bottom-0 left-0 w-16 h-1 bg-blue-600"></span>
+                The Results
+              </h2>
               
-              <ul className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 {caseStudy.results.map((result, index) => (
-                  <motion.li 
+                  <motion.div 
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-start"
+                    className="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600"
                   >
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-8 h-8 bg-[#D1FAE5] rounded-full flex items-center justify-center mr-4">
-                        <svg className="w-4 h-4 text-[#10B981]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                          <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
                       </div>
+                      <p className="text-gray-700">{result}</p>
                     </div>
-                    <p className="text-lg text-gray-700">{result}</p>
-                  </motion.li>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
             </motion.section>
           </div>
 
@@ -249,11 +240,11 @@ const CaseStudyDetail = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="bg-white p-8 rounded-2xl shadow-xl sticky top-8 border-t-4 border-[#10B981]"
+              className="bg-white p-6 rounded-xl shadow-lg sticky top-8"
             >
-              <h3 className="text-2xl font-bold mb-8 text-gray-900">Project Highlights</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Key Metrics</h3>
               
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {caseStudy.stats.map((stat, index) => (
                   <motion.div 
                     key={index}
@@ -261,12 +252,17 @@ const CaseStudyDetail = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + index * 0.1 }}
+                    className="flex items-center"
                   >
-                    <p className="text-4xl font-bold text-[#10B981]">{stat.value}</p>
-                    <p className="text-gray-600 mt-1">{stat.label}</p>
-                    {index < caseStudy.stats.length - 1 && (
-                      <div className="border-b border-gray-100 mt-6"></div>
-                    )}
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-gray-800">{stat.value}</p>
+                      <p className="text-gray-600">{stat.label}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -274,19 +270,19 @@ const CaseStudyDetail = () => {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-10 w-full bg-[#10B981] text-white py-4 px-6 rounded-xl font-bold text-lg hover:bg-[#0E9F6E] transition shadow-md"
+                className="mt-8 w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition shadow-md"
               >
-                Download Case Study (PDF)
+                Download Full Report
               </motion.button>
               
-              <div className="mt-8 pt-6 border-t border-gray-100">
+              <div className="mt-8 pt-6 border-t border-gray-200">
                 <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Share this case study</h4>
-                <div className="flex space-x-4">
+                <div className="flex space-x-3">
                   {['Twitter', 'LinkedIn', 'Facebook'].map((social, index) => (
                     <motion.button
                       key={social}
                       whileHover={{ y: -2 }}
-                      className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-[#D1FAE5] hover:text-[#10B981] transition"
+                      className="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition"
                     >
                       <span className="sr-only">{social}</span>
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

@@ -83,6 +83,7 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
+          <a href="/services">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -90,6 +91,7 @@ const WhyChooseUs = () => {
           >
             See Our Quality Process
           </motion.button>
+          </a>
         </motion.div>
       </div>
     </section>

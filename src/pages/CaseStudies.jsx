@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import CaseStudyCard from '../components/common/CaseStudyCard';
 import FilterButtons from '../components/common/FilterButtons';
+import Tag from '../Pictures/tag.jpg'
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -17,7 +18,7 @@ const CaseStudies = () => {
         "Delivered 2 weeks ahead of schedule",
         "Cost 40% less than US-based providers"
       ],
-      image: "/images/case-autonomous.jpg",
+      image: "https://www.labelvisor.com/content/images/2023/02/cuboid.jpg",
       tags: ["Computer Vision", "Large Scale"],
       detailedContent: {
         overview: "We partnered with a cutting-edge European AutoTech startup to provide high-quality labeled data for their autonomous vehicle perception system. The project required precise annotation of objects in diverse weather conditions including rain, fog, and snow.",
@@ -48,7 +49,7 @@ const CaseStudies = () => {
         "Completed 100,000 image annotations",
         "Enabled FDA approval for their diagnostic tool"
       ],
-      image: "/images/case-medical.jpg",
+      image: "https://keymakr.com/blog/content/images/2024/06/KM66main.jpg",
       tags: ["Healthcare", "High Precision"],
       detailedContent: {
         overview: "Collaborated with a healthcare AI company to annotate medical images for rare disease detection, requiring specialized knowledge and extreme precision.",
@@ -78,7 +79,7 @@ const CaseStudies = () => {
         "Reduced misclassifications by 28%",
         "Scaled team from 10 to 100 annotators in 2 weeks"
       ],
-      image: "/images/case-ecommerce.jpg",
+      image: Tag,
       tags: ["Classification", "Scalability"],
       detailedContent: {
         overview: "Supported a pan-African retail platform in organizing their massive product catalog through precise image classification and attribute tagging.",
@@ -108,7 +109,7 @@ const CaseStudies = () => {
         "Processed 50,000 hours of video data",
         "Enabled real-time performance insights"
       ],
-      image: "/images/case-sports.jpg",
+      image: "https://www.sblcorp.ai/wp-content/uploads/2024/05/sports-annotation.webp",
       tags: ["Motion Tracking", "Real-time"],
       detailedContent: {
         overview: "Partnered with a sports technology leader to annotate athlete movements for performance analysis across multiple sports disciplines.",
@@ -327,6 +328,7 @@ const CaseStudies = () => {
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Our team is ready to help you with your data annotation needs, no matter how complex.
               </p>
+              <a href="/contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -334,6 +336,7 @@ const CaseStudies = () => {
               >
                 Get in Touch
               </motion.button>
+              </a>
             </motion.section>
           </>
         )}

@@ -79,23 +79,23 @@ const Hero = () => {
             variants={variants}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <motion.button
+           <a href="/contact"><motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center gap-2 bg-amber-500 text-gray-900 px-8  py-2 rounded-lg font-bold hover:bg-amber-400 transition"
             >
               Get Started
               <ArrowRight className="w-5 h-5" />
-            </motion.button>
+            </motion.button></a>
             
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center gap-2 border-2 border-white px-8  py-2 rounded-lg font-bold hover:bg-white hover:text-gray-900 transition"
             >
               <Play className="w-5 h-5" />
               Watch Demo
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           <motion.div 

@@ -2,6 +2,11 @@ import { motion } from 'framer-motion';
 import TeamSection from '../components/sections/TeamSection';
 import MissionVision from '../components/sections/MissionVision';
 import HistoryTimeline from '../components/sections/HistoryTimeline';
+
+
+
+
+
 const About = () => {
   return (
     <div className="min-h-screen bg-emerald-50">
@@ -57,9 +62,11 @@ const About = () => {
                 <button className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1">
                   Meet Our Team
                 </button>
+                <a href="/case-studies">
                 <button className="px-4 py-2 border border-emerald-600 text-emerald-600 hover:bg-emerald-50 rounded-lg font-medium transition-colors duration-300">
                   View Case Studies
                 </button>
+                </a>
               </div>
             </div>
             <div className="lg:w-1/2 relative">
@@ -146,9 +153,11 @@ const About = () => {
             <p className="text-xl text-emerald-100 max-w-2xl mx-auto mb-8">
               Partner with us for high-quality training data that delivers results.
             </p>
+            <a href="/contact">
             <button className="px-8 py-4 bg-white text-emerald-700 hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Started Today
             </button>
+            </a>
           </motion.div>
         </section>
       </div>
