@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Quality from '../../Pictures/Haz.jpg'
 import CTO from '../../Pictures/Genius2.jpg'
-import Founder from '../../Pictures/Tadie2.bmp';
+import Founder from '../../Pictures/Tadie2.jpg';
 
 
 const teamMembers = [
@@ -50,11 +50,16 @@ const TeamSection = () => {
             transition={{ delay: index * 0.1 }}
             className="bg-white rounded-xl shadow-md overflow-hidden"
           >
-            <img
-              src={member.image} 
-              alt={member.name} 
-              className="w-full h-[352px] xl:h-[250px]  object-cover"
-            />
+                        <img
+  src={member.image} 
+  alt={member.name} 
+  className="w-full h-[352px] xl:h-[250px] object-cover object-center"
+  style={{
+    imageRendering: 'optimizeQuality',
+    backfaceVisibility: 'hidden',
+    transform: 'translateZ(0)'
+  }}
+/>
             <div className="p-6">
               <h3 className="text-xl font-bold">{member.name}</h3>
               <p className="text-indigo-600 mb-3">{member.role}</p>

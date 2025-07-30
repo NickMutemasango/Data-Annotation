@@ -16,6 +16,10 @@ strong, b {
   font-weight: 500;
 }
 
+
+
+/* In your global CSS */
+
 /* .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
